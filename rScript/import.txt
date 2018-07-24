@@ -1,0 +1,50 @@
+The easiest form of data to import R is a simple text file, and this will often be acceptable for problems of small or medium scale.
+The primary function to import from a text file is scan, and this underlies most of the more of the more convenient functions discussed
+in Chapter2, page 7.
+The primary function to excport to a text file is cat.
+统计学家称数据集的行和列为观测和变量。
+* 日期值处理
+形式有年月日星期没有周。
+R的内部在存储日期是，是使用自1970年1月1日以来的天数表示的，所以日期值是可以运算的。
+计算周
+difftime(today, dob, units = "weeks")
+从日期值中提取字符，format.
+format(today, "%Y")
+字符和日期值总是可以相互转化。
+排序。
+sort对向量进行排序，传值方式。
+order产生向量元素的秩的向量。
+a[order(a)]
+a[order(-a)]
+去重
+df <- df[which( ! duplicated(df$colname)), ]
+编码缺失值
+df$colname[df$colname == 'a'] <- NA
+选入/剔除变量。
+df <- df[c(T, T, F)]
+df <- df[c(T)]
+df <- df[c(1, 2, 3)]
+df <- df[c(-2)]
+增加变量
+df$ncol <- x
+选入观测。
+ndf <- df[which(df$colname =='a'| df$colname =='b'), ]
+ndf <- df[c(1,2,3,4),]
+ndf <- subset(df, colname == 'a', select = c(colname1, colname2))
+随机抽样
+ndf <-sample(x, 2, replace = FALSE)
+字符处理
+组合
+paste(str1, str2, sep = '_')
+toupper(str1)
+tolower(str1)
+截取
+substr(str1, 2, 3)#可以是中文，也可以是西文
+计算字符个数
+nchar(x)
+替换
+sub('\\s', '.', 'Hello There')
+分词
+strsplit('abc', '')
+匹配
+grep('[a-z]', str1)

@@ -1,0 +1,24 @@
+Read 3 items
+Parsed with column specification:
+cols(
+  X1 = col_character(),
+  X2 = col_character(),
+  X3 = col_character(),
+  X4 = col_character(),
+  X5 = col_integer(),
+  X6 = col_character(),
+  X7 = col_character(),
+  X8 = col_character(),
+  X9 = col_character(),
+  X10 = col_integer(),
+  X11 = col_integer(),
+  X12 = col_integer(),
+  X13 = col_integer(),
+  X14 = col_integer(),
+  X15 = col_character(),
+  X16 = col_character()
+)
+Done! Outing in file keyword.csv and update.csv
+ Tue Jul 24 10:33:47 2018> proc.time()
+   user  system elapsed 
+   0.90    0.23    1.84 
